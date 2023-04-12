@@ -8,6 +8,7 @@ world_the_end
 plugins/bStats
 plugins/spark
 versions
+crash-reports
 
 #Files
 .console_history
@@ -39,4 +40,4 @@ plugins/SkinsRestorer/Skins
 plugins/TempBan-Api/bans.yml
 
 #SuperHardCoreSMP
-plugins/SuperHardCore-0.1.jar
+plugins/SuperHardCore*.jar
