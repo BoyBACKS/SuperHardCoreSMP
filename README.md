@@ -18,3 +18,5 @@ You can read more [here](https://github.com/BoyBACKS/SuperHardCoreSMP/wiki)
 ## Used Spigot fork:
 * [Purpur](https://github.com/pl3xgaming/Purpur)
 
+## License
+* [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
