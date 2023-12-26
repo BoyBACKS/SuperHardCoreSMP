@@ -10,8 +10,11 @@
 
 verbose: false
 settings:
+  player-deaths-always-show-item: false
   fix-network-serialized-items-in-creative: false
   messages:
+    afk-broadcast-use-display-name: false
+    sleep-not-possible: default
     cannot-ride-mob: <red>You cannot mount that mob
     afk-broadcast-away: <yellow><italic>%s is now AFK
     afk-broadcast-back: <yellow><italic>%s is no longer AFK
@@ -112,15 +115,16 @@ settings:
     allow-looting-on-shears: false
     allow-transparent-blocks-in-enchantment-box: false
     anvil:
+      replace-incompatible-enchants: false
       allow-unsafe-enchants: false
       allow-inapplicable-enchants: true
       allow-incompatible-enchants: true
       allow-higher-enchants-levels: true
-    allow-unsafe-enchant-command: false
+    allow-unsafe-enchant-command: true
     clamp-levels: true
   broadcasts:
     advancement:
-      only-broadcast-to-affected-player: false
+      only-broadcast-to-affected-player: true
     death:
       only-broadcast-to-affected-player: false
   command:
@@ -187,7 +191,7 @@ settings:
     upnp-port-forwarding: false
     max-joins-per-second: false
     kick-for-out-of-order-chat: true
-config-version: 31
+config-version: 34
 world-settings:
   default:
     blocks:
@@ -217,7 +221,7 @@ world-settings:
         explosion-fire: true
         explosion-effect: BLOCK
       stonecutter:
-        damage: 0.0
+        damage: 1.0
       sculk_shrieker:
         can-summon-default: false
       big_dripleaf:
@@ -331,6 +335,7 @@ world-settings:
         infinite-source: true
         infinite-required-sources: 2
       sponge:
+        absorbs-water-from-mud: false
         absorption:
           area: 64
           radius: 6
@@ -384,6 +389,7 @@ world-settings:
         takes-damage-from-water: false
         always-drop-exp: false
       skeleton_horse:
+        ridable: false
         ridable-in-water: true
         can-swim: false
         attributes:
@@ -453,6 +459,7 @@ world-settings:
           enabled: true
         always-drop-exp: false
       zombie_horse:
+        ridable: false
         ridable-in-water: false
         can-swim: false
         attributes:
@@ -770,6 +777,13 @@ world-settings:
         controllable: true
         ridable-max-y: 320.0
         attributes:
+          follow_range: 16.0
+          knockback_resistance: 0.0
+          movement_speed: 0.6
+          flying_speed: 0.6
+          armor: 0.0
+          armor_toughness: 0.0
+          attack_knockback: 0.0
           max_health: 6.0
         takes-damage-from-water: false
         always-drop-exp: false
@@ -840,6 +854,7 @@ world-settings:
         takes-damage-from-water: true
         always-drop-exp: false
       camel:
+        ridable-in-water: false
         attributes:
           max_health:
             min: 32.0
@@ -1146,6 +1161,7 @@ world-settings:
         takes-damage-from-water: false
         always-drop-exp: false
       ocelot:
+        spawn-below-sea-level: false
         ridable: false
         ridable-in-water: false
         controllable: true
@@ -1197,6 +1213,7 @@ world-settings:
         can-breed: false
         always-drop-exp: false
       piglin:
+        ignores-armor-with-gold-trim: false
         ridable: false
         ridable-in-water: false
         controllable: true
@@ -1288,6 +1305,15 @@ world-settings:
           minecraft:crimson_hyphae:
             drops: {}
             into: minecraft:stripped_crimson_hyphae
+          minecraft:cherry_log:
+            drops: {}
+            into: minecraft:stripped_cherry_log
+          minecraft:cherry_wood:
+            drops: {}
+            into: minecraft:stripped_cherry_wood
+          minecraft:bamboo_block:
+            drops: {}
+            into: minecraft:stripped_bamboo_block
         waxables:
           minecraft:waxed_oxidized_cut_copper:
             drops: {}
@@ -1337,6 +1363,66 @@ world-settings:
           minecraft:waxed_weathered_cut_copper:
             drops: {}
             into: minecraft:weathered_cut_copper
+          minecraft:waxed_chiseled_copper:
+            drops: {}
+            into: minecraft:chiseled_copper
+          minecraft:waxed_exposed_chiseled_copper:
+            drops: {}
+            into: minecraft:exposed_chiseled_copper
+          minecraft:waxed_weathered_chiseled_copper:
+            drops: {}
+            into: minecraft:weathered_chiseled_copper
+          minecraft:waxed_oxidized_chiseled_copper:
+            drops: {}
+            into: minecraft:oxidized_chiseled_copper
+          minecraft:waxed_copper_door:
+            drops: {}
+            into: minecraft:copper_door
+          minecraft:waxed_exposed_copper_door:
+            drops: {}
+            into: minecraft:exposed_copper_door
+          minecraft:waxed_weathered_copper_door:
+            drops: {}
+            into: minecraft:weathered_copper_door
+          minecraft:waxed_oxidized_copper_door:
+            drops: {}
+            into: minecraft:oxidized_copper_door
+          minecraft:waxed_copper_trapdoor:
+            drops: {}
+            into: minecraft:copper_trapdoor
+          minecraft:waxed_exposed_copper_trapdoor:
+            drops: {}
+            into: minecraft:exposed_copper_trapdoor
+          minecraft:waxed_weathered_copper_trapdoor:
+            drops: {}
+            into: minecraft:weathered_copper_trapdoor
+          minecraft:waxed_oxidized_copper_trapdoor:
+            drops: {}
+            into: minecraft:oxidized_copper_trapdoor
+          minecraft:waxed_copper_grate:
+            drops: {}
+            into: minecraft:copper_grate
+          minecraft:waxed_exposed_copper_grate:
+            drops: {}
+            into: minecraft:exposed_copper_grate
+          minecraft:waxed_weathered_copper_grate:
+            drops: {}
+            into: minecraft:weathered_copper_grate
+          minecraft:waxed_oxidized_copper_grate:
+            drops: {}
+            into: minecraft:oxidized_copper_grate
+          minecraft:waxed_copper_bulb:
+            drops: {}
+            into: minecraft:copper_bulb
+          minecraft:waxed_exposed_copper_bulb:
+            drops: {}
+            into: minecraft:exposed_copper_bulb
+          minecraft:waxed_weathered_copper_bulb:
+            drops: {}
+            into: minecraft:weathered_copper_bulb
+          minecraft:waxed_oxidized_copper_bulb:
+            drops: {}
+            into: minecraft:oxidized_copper_bulb
         weatherables:
           minecraft:weathered_copper:
             drops: {}
@@ -1374,6 +1460,51 @@ world-settings:
           minecraft:exposed_cut_copper_stairs:
             drops: {}
             into: minecraft:cut_copper_stairs
+          minecraft:exposed_chiseled_copper:
+            drops: {}
+            into: minecraft:chiseled_copper
+          minecraft:weathered_chiseled_copper:
+            drops: {}
+            into: minecraft:exposed_chiseled_copper
+          minecraft:oxidized_chiseled_copper:
+            drops: {}
+            into: minecraft:weathered_chiseled_copper
+          minecraft:exposed_copper_door:
+            drops: {}
+            into: minecraft:copper_door
+          minecraft:weathered_copper_door:
+            drops: {}
+            into: minecraft:exposed_copper_door
+          minecraft:oxidized_copper_door:
+            drops: {}
+            into: minecraft:weathered_copper_door
+          minecraft:exposed_copper_trapdoor:
+            drops: {}
+            into: minecraft:copper_trapdoor
+          minecraft:weathered_copper_trapdoor:
+            drops: {}
+            into: minecraft:exposed_copper_trapdoor
+          minecraft:oxidized_copper_trapdoor:
+            drops: {}
+            into: minecraft:weathered_copper_trapdoor
+          minecraft:exposed_copper_grate:
+            drops: {}
+            into: minecraft:copper_grate
+          minecraft:weathered_copper_grate:
+            drops: {}
+            into: minecraft:exposed_copper_grate
+          minecraft:oxidized_copper_grate:
+            drops: {}
+            into: minecraft:weathered_copper_grate
+          minecraft:exposed_copper_bulb:
+            drops: {}
+            into: minecraft:copper_bulb
+          minecraft:weathered_copper_bulb:
+            drops: {}
+            into: minecraft:exposed_copper_bulb
+          minecraft:oxidized_copper_bulb:
+            drops: {}
+            into: minecraft:weathered_copper_bulb
       hoe:
         tillables:
           minecraft:grass_block:
@@ -1399,12 +1530,34 @@ world-settings:
             drops: {}
         replant-crops: false
         replant-nether-warts: false
+      shovel:
+        flattenables:
+          minecraft:coarse_dirt:
+            drops: {}
+            into: minecraft:dirt_path
+          minecraft:dirt:
+            drops: {}
+            into: minecraft:dirt_path
+          minecraft:grass_block:
+            drops: {}
+            into: minecraft:dirt_path
+          minecraft:mycelium:
+            drops: {}
+            into: minecraft:dirt_path
+          minecraft:podzol:
+            drops: {}
+            into: minecraft:dirt_path
+          minecraft:rooted_dirt:
+            drops: {}
+            into: minecraft:dirt_path
     ridable-settings:
       use-dismounts-underwater-tag: true
       babies-are-ridable: true
       untamed-tamables-are-ridable: true
       use-night-vision: false
     gameplay-mechanics:
+      mending-multiplier: 1.0
+      disable-oxidation-proximity-penalty: false
       entity-lifespan: 0
       entity-left-handed-chance: 0.05000000074505806
       infinity-bow:
@@ -1448,6 +1601,8 @@ world-settings:
         trident: 1.0
         snowball: 1.0
       player:
+        portal-wait-time: 80
+        creative-portal-wait-time: 1
         netherite-fire-resistance:
           duration: 0
           amplifier: 0
@@ -1511,12 +1666,15 @@ world-settings:
         ticks-per-damage: 20
         damage-from-drowning: 2.0
       item:
+        end-crystal:
+          place-anywhere: false
         immune:
           cactus: []
           explosion: []
           fire: []
           lightning: []
         shears:
+          defuse-tnt-chance: 0.0
           ignore-in-water: false
           ignore-in-lava: false
           damage-if-sprinting: false
@@ -1551,13 +1709,6 @@ world-settings:
         wither-degeneration-amount: 1.0
         hunger-exhaustion-amount: 0.004999999888241291
         saturation-regen-amount: 1.0
-      shovel-turns-block-to-grass-path:
-      - minecraft:coarse_dirt
-      - minecraft:dirt
-      - minecraft:grass_block
-      - minecraft:mycelium
-      - minecraft:podzol
-      - minecraft:rooted_dirt
       projectile-damage:
         snowball: -1
       silk-touch:
