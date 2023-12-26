@@ -11,8 +11,8 @@ You can read more [here](https://github.com/BoyBACKS/SuperHardCoreSMP/wiki)
 * [FastLogin](https://www.spigotmc.org/resources/fastlogin.14153/) - devBuild[#1290](https://ci.codemc.io/job/Games647/job/FastLogin/1225/)
 * [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) - devBuild[#679](https://ci.dmulloy2.net/job/ProtocolLib/679/)
 * [SkinsRestorer](https://www.spigotmc.org/resources/skinsrestorer.2124/) -v15.0.4
-* [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) - v4.9.2
-* [ViaBackWards](https://www.spigotmc.org/resources/viabackwards.27448/) - v4.9.1
+* [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) - v4.10.0-23w51b[#981](https://ci.viaversion.com/job/ViaVersion-DEV/981/)
+* [ViaBackWards](https://www.spigotmc.org/resources/viabackwards.27448/) - v4.10.0-23w51b[#556](https://ci.viaversion.com/view/ViaBackwards/job/ViaBackwards-DEV/556/)
 * [tempban-api](https://github.com/BoyBACKS/tempban-api) - v1.0
 * [SuperHardCore](https://github.com/BoyBACKS/SuperHardCore) - Always download the latest version for a balanced and better game
 ## Used Spigot fork:
