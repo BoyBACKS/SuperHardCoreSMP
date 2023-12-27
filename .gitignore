@@ -35,6 +35,7 @@ plugins/AuthMe/commands.yml
 #SkinsRestorer
 plugins/SkinsRestorer/Players
 plugins/SkinsRestorer/legacy/skins
+plugins/SkinsRestorer/skins
 
 #TempBan-API
 plugins/TempBan-Api/bans.yml
