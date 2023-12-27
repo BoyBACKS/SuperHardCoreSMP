@@ -45,6 +45,8 @@ advancements:
   - minecraft:story/disabled
 world-settings:
   default:
+    seed-trailruins: 83469867
+    seed-trialchambers: 94251327
     below-zero-generation-in-existing-chunks: true
     enable-zombie-pigmen-portal-spawns: true
     dragon-death-sound-radius: 0
@@ -64,6 +66,8 @@ world-settings:
     item-despawn-rate: 5000
     thunder-chance: 100000
     growth:
+      torchflower-modifier: 100
+      pitcherplant-modifier: 100
       cactus-modifier: 100
       cane-modifier: 100
       melon-modifier: 100
@@ -85,6 +89,7 @@ world-settings:
       cavevines-modifier: 100
       glowberry-modifier: 100
     entity-tracking-range:
+      display: 128
       players: 48
       animals: 48
       monsters: 48
