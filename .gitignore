@@ -21,6 +21,9 @@ version_history.json
 
 # #PluginFiles/Folders
 
+# ProtocolLib
+plugins/ProtocolLib/lastupdate
+
 #Fast Login
 plugins/FastLogin/FastLogin.db
 
